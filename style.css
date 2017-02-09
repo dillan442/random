@@ -1,7 +1,14 @@
+
 #button-container {
     text-align: center;
 }
 
 h1 {
     text-align: center;
+    color:red;
+    font-family: Caveat+Brush
+}
+
+body{
+    background-color: blue
 }

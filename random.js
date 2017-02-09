@@ -5,24 +5,115 @@ var namespace = "http://www.w3.org/2000/svg"
 // You need to use at least 3 different types of shape.
 // Remember, for the shapes to show up on the canvas, you'll need to CALL the function.
 function createFirstScene() {
+    makeRect(0,0,1000,2000,"white")
+    makeCircle(100,40,15,"green")
+    makeRect(85,40,30,35,"green")
+    makeRect(83,38,80,3,"white")
+    makeRect(79,40,4,14,"green")
+    makeRect(117,40,4,14,"green")
+    makeRect(89,76,5,8,"green")
+    makeRect(106,76,5,8,"green")
+    makeCircle(93,33,1,"white")
+    makeCircle(106,33,1,"white")
+    makePolygon("93 30 88 23 91 21 96 30","green",1)
+    makePolygon("103 30 109 21 112 24 108 30","green",1)
     
 }
+
 
 
 // Fill in this function so that it draws something using SVG shapes!
 // You need to use at least 3 different types of shape.
 // Remember, for the shapes to show up on the canvas, you'll need to CALL the function.
 function createSecondScene() {
-    
+   makeRect(0,0,1000,2000,"white")
+  makeCircle(150,15,10,"yellow")
+makeRect(0,80,230,100,"green")
+makeRect(80,60,40,20,"blue")
+makeRect(95,67,10,13,"black")
+makePolygon("70 60 130 60 100 30","black",1)
 }
-
-
 // Fill in this function so that it draws something using SVG shapes!
 // You need to use at least 3 different types of shape.
 // Remember, for the shapes to show up on the canvas, you'll need to CALL the function.
 function createThirdScene() {
+   makeRect(0,0,1000,2000,"white")
+   makeRect(40,45,1100, 10,"gray")
+   makeRect(40,30,16,46,"black")
+   makeRect(75,30,16,46,"black")
+   makeRect(105,30,16,46,"black")
+   
+   
+   makeCircle(48,38,7,"red")
+   makeCircle(48,53,7,"gray")
+   makeCircle(48,68,7,"gray")
+   
+   
+   makeCircle(83,38,7,"red")
+   makeCircle(83,53,7,"gray")
+   makeCircle(83,68,7,"gray")
+   
+   
+   
+   makeCircle(113,38,7,"red")
+   makeCircle(113,53,7,"gray")
+   makeCircle(113,68,7,"gray")
+   
+   
+   
+}
+
+function createFourthScene(){
+     makeRect(0,0,1000,2000,"white")
+    makeCircle(100,40,15,"green")
+    makeRect(85,40,30,35,"green")
+    makeRect(83,38,80,3,"white")
+    makeRect(79,40,4,14,"green")
+    makeRect(117,40,4,14,"green")
+    makeRect(89,76,5,8,"green")
+    makeRect(106,76,5,8,"green")
+    makeCircle(93,33,1,"blue")
+    makeCircle(106,33,1,"blue")
+    makePolygon("93 30 88 23 91 21 96 30","green",1)
+    makePolygon("103 30 109 21 112 24 108 30","green",1)
     
 }
+
+
+function createFifthScene(){
+    makeRect(0,0,1000,2000,"black")
+  makeCircle(150,15,10,"white")
+makeRect(0,80,230,100,"green")
+makeRect(80,60,40,20,"blue")
+makeRect(95,67,10,13,"gray")
+makePolygon("70 60 130 60 100 30","gray",1)
+
+}
+
+function createSixthScene(){
+     makeRect(0,0,1000,2000,"white")
+   makeRect(40,45,1100, 10,"gray")
+   makeRect(40,30,16,46,"black")
+   makeRect(75,30,16,46,"black")
+   makeRect(105,30,16,46,"black")
+   
+   
+   makeCircle(48,38,7,"gray")
+   makeCircle(48,53,7,"gray")
+   makeCircle(48,68,7,"green")
+   
+   
+   makeCircle(83,38,7,"gray")
+   makeCircle(83,53,7,"gray")
+   makeCircle(83,68,7,"green")
+   
+   
+   
+   makeCircle(113,38,7,"gray")
+   makeCircle(113,53,7,"gray")
+   makeCircle(113,68,7,"green")
+}
+
 
 
 
@@ -34,8 +125,22 @@ function createRandomScene() {
     // Generate a random number between 0 and 1, and store it in a variable.
     
     // If the number is less than 0.33, call the function to create your first scene.
-    
-    
+    var myNumber = Math.random()
+    if(myNumber<0.17){
+        createFirstScene()
+    }else if(myNumber<0.25){
+        createFourthScene()
+    }    else if(myNumber<0.45){
+        createSecondScene()
+    }else if(myNumber<0.65){
+        createFifthScene()
+    } else if(myNumber<0.85) {
+        createThirdScene()
+    } else if(myNumber<1.0){
+        createSixthScene()
+    }
+
+        
     
     // Else, if the number is less than 0.67, call the function to create your second scene.
     
